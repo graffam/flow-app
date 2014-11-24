@@ -1,0 +1,19 @@
+<!DOCTYPE.html>
+<html>
+  <head>
+    <link href="../foundation.css" type="text/css" rel="stylesheet">
+    <link href="normalize.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Flows Currently Subscribed</h1>
+    </div>
+  </div>
+    <ul>
+      <%@flows.each do |flow| %>
+        <li> <a href="/flow?token=<%=flow["api_token"]%>"> <%= flow["name"] %> </li>
+        <% end %>
+    </ul>
+  </body>
+</html>

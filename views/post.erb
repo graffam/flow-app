@@ -1,0 +1,21 @@
+<!DOCTYPE.html>
+<html>
+  <head>
+        <link href="foundation.css" type="text/css" rel="stylesheet">
+        <link href="normalize.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="row">
+      <div class="twelves columns text-center">
+        <h1>Post To Flow </h1>
+      </div>
+    </div>
+    <div class="row">
+      <form action='/flow_post' method='POST'>
+        <input type='Text' name='content' size='20' placeholder='what do you wanna say?'>
+        <input type='hidden' name='token' value='<%= @api_token %>' >
+        <button type='submit'>Post</button>
+      </form>
+    </div>
+  </body>
+</html>
